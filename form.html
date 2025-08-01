@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form">
+        <div>
+            <label for="Item">Item:</label>
+            <input type="text" id="Item" name="Item" required>
+        </div>
+        <div>
+            <label for="Category">Category:</label>
+            <input type="text" id="Category" name="Category" required>
+        </div>
+        <div>
+            <label for="Quantity">Quantity:</label>
+            <input type="number" id="Quantity" name="Quantity" required>
+        </div>
+        <div>
+            <label for="Date">Date:</label>
+            <input type="date" id="Date" name="Date" required>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+            let CurrentUser = JSON.parse(localStorage.getItem('currentUser'));
+            document.getElementById("form").addEventListener('submit', function(event) {
+            event.preventDefault();
+            let item = document.getElementById('Item').value;
+            let category = document.getElementById('Category').value;
+            let quantity = document.getElementById('Quantity').value;
+            let date = document.getElementById('Date').value;
+                let options = {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        email:CurrentUser.user.email,
+                        item: item,
+                        category: category,
+                        quantity: quantity,
+                        date: date
+                    })
+                };
+                fetch('/api/donations/form', options)
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log('Success:', data);
+                        // Optionally, redirect or update the UI
+                    })
+                    .catch((error) => {
+                        console.error('Error:', error);
+                    });
+                    alert('Donation submitted successfully!');
+                    window.location.href = '/donor-dashboard.html'; // Redirect to donor dashboard
+        });
+
+    </script>
+</body>
+</html>

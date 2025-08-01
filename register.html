@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | Donation Drive</title>
+    <link rel="stylesheet" href="auth.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="register-card">
+            <h1>Create Account</h1>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="register-name">First Name</label>
+                    <input type="text" id="register-first-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-name">Last Name</label>
+                    <input type="text" id="register-last-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-email">Email</label>
+                    <input type="email" id="register-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-password">Password</label>
+                    <input type="password" id="register-password" required>
+                </div>
+                <div class="form-group">
+                    <label>I am a:</label>
+                    <div class="role-options">
+                        <label class="role-option">
+                            <input type="radio" name="user-role" value="donor" id="donor-role">
+                            <span>Donor</span> 
+                        </label>
+                        <label class="role-option">
+                            <input type="radio" name="user-role" value="ngo" id="ngo-role">
+                            <span>NGO Member</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group hidden">
+                    <label for="Security-Code">Security-Code</label>
+                    <input type="password" id="security-code">
+                </div>
+                <button type="submit" class="submit-btn">Register</button>
+            </form>
+            
+            <p class="auth-footer">Already have an account? <a href="login.html">Login here</a></p>
+        </div>
+    </div>
+
+    <script src="auth.js"></script>
+</body>
+</html>

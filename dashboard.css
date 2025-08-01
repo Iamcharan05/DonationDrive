@@ -1,0 +1,127 @@
+.dashboard {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+    min-height: 100vh;
+}
+
+.dashboard header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.donor-dashboard header h1 {
+    color: var(--donor-color);  
+}
+
+.ngo-dashboard header h1 {
+    color: var(--ngo-color);
+}
+
+#logout-btn {
+    padding: 8px 15px;
+    background: #f0f0f0;
+    border: none;
+    border-radius: 5px;
+}
+
+.filters {
+    margin-bottom: 20px;
+}
+
+#donation-filter {
+    padding: 8px 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.donation-list {
+    height:100vh;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 40px 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.empty-state p {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.empty-state button {
+    padding: 10px 20px;
+    background: var(--donor-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.donation-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom:15px;
+}
+
+.donation-card h3 {
+    margin-bottom: 10px;
+}
+
+.donation-meta {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+    color: #666;
+    font-size: 14px;
+}
+
+.action-btn {
+    padding: 5px 10px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-size: 13px;
+}
+
+.floating-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--donor-color);
+    color: white;
+    border: none;
+    font-size: 24px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.donor-donation-list {
+    height:100vh;
+}
+.new_btn {
+    padding: 10px 20px;
+    background: var(--donor-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn-container {
+    text-align: center;
+    margin-bottom: 15px;
+}

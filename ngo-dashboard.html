@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Management | Donation Drive</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard ngo-dashboard">
+        <header>
+            <h1>Donation Management</h1>
+            <button id="logout-btn">Logout</button>
+        </header>
+        
+        <div class="filters">
+            <select id="donation-filter">
+                <option value="all">All Donations</option>
+                <option value="pending">Pending</option>
+                <option value="approved">Approved</option>
+                <option value="collected">Collected</option>
+            </select>
+        </div>
+        
+        <div class="donation-list" id="ngo-donation-list">
+            <!-- Will be populated by JavaScript -->
+        </div>
+    </div>
+
+    <script src="ngo.js"></script>
+</body>
+</html>
